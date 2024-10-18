@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useCurrencyInfo() {
+function useCurrencyInfo(currency) {
   const [data, setData] = useState({});
   useEffect(() => {
     fetch(
@@ -8,9 +8,7 @@ function useCurrencyInfo() {
     )
       .then((res) => res.json())
       .then((res) => setData(res[currency]));
-    console.log(data);
   }, [currency]);
-  console.log(data);
 
   return data;
 }
