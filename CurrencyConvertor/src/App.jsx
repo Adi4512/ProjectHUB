@@ -2,6 +2,7 @@ import { useState } from "react";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import InputBox from "./components/InputBox";
 import bgImage from "./asset/bg.webp";
+import Footer from "./components/Footer";
 function App() {
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
@@ -24,11 +25,18 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+      className=" w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="w-full">
-        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 ">
+        <div
+          className="w-full max-w-lg mx-auto border border-gray-60 rounded-lg  p-5 backdrop-blur-sm bg-white/30
+        
+        
+        
+        
+        "
+        >
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -67,14 +75,15 @@ function App() {
             </div>
             <button
               type="submit"
-              className="hover:scale-105 duration-200 transition-transform ease-in-out hover:text-black hover:bg-slate-50 w-full bg-gray-900 text-white px-4 py-3 rounded-lg
-              hover:border-2 hover:border-gray-400
-              "
+              className="hover:scale-105 duration-200 transition-transform ease-in-out hover:text-black hover:bg-slate-50 w-full bg-gray-900 text-white py-3 rounded-lg hover:border-2 hover:border-gray-400 transform-gpu will-change-transform"
             >
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
           </form>
         </div>
+      </div>
+      <div className="w-full ">
+        <Footer />
       </div>
     </div>
   );
