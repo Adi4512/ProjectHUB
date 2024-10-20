@@ -8,7 +8,7 @@ function User() {
       className="mt-10 flex flex-col
   text-3xl text-gray-500 justify-center items-center text-center p-8 bg-gray-100"
     >
-      User ➡️ 🙌🙌🙌{id}
+      User ➡️{id}
     </div>
   );
 }
